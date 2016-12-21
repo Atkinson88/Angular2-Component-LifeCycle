@@ -10,6 +10,8 @@ List of lifecycle hooks.
     // Component controller
     export class MyComponent {
     
+      constructor(){}
+    
       ngOnInit() {
         // Initialize the directive/component after Angular initializes the data-bound input properties.
       }
