@@ -11,21 +11,21 @@ List of lifecycle hooks.
     export class MyComponent {
     
       ngOnInit() {
-        // Called when the component is requested.
+        // Initialize the directive/component after Angular initializes the data-bound input properties.
       }
       
       ngOnDestroy() {
-        // Speak now or forever hold your peace
+        // Just before Angular destroys the directive/component.
       }
       
       ngDoCheck() {
-        // Custom change detection
+        // Detect and act upon changes that Angular can or won’t detect on its own. Called every change detection run.
       }
       
       ngOnChanges(changes) {
-        // Called right after our bindings have been checked but only
-        // if one of our bindings has changed.
-        //
+        
+        // Respond after Angular sets a data-bound input property. The method receives a changes object of current and previous values.
+        
         // changes is an object of the format:
         // {
         //   'prop': PropertyUpdate
@@ -33,19 +33,19 @@ List of lifecycle hooks.
       }
       
       ngAfterContentInit() {
-        // Component content has been initialized
+        // After Angular projects external content into its view.
       }
       
       ngAfterContentChecked() {
-        // Component content has been Checked
+        // 	After Angular checks the bindings of the external content that it projected into its view.
       }
       
       ngAfterViewInit() {
-        // Component views are initialized
+        // After Angular creates the component’s view(s).
       }
       
       ngAfterViewChecked() {
-        // Component views have been checked
+        // 	After Angular checks the bindings of the component’s view(s).
       }
       
     }
