@@ -11,10 +11,7 @@ List of lifecycle hooks.
     export class MyComponent {
     
       ngOnInit() {
-        // Properties are resolved and things like
-        // this.mapWindow and this.mapControls
-        // had a chance to resolve from the
-        // two child components <map-window> and <map-controls>
+        // Called when the component is requested.
       }
       
       ngOnDestroy() {
